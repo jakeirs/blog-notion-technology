@@ -1,7 +1,4 @@
-import ThemeToggle from "@/components/blocks/theme-toggle";
-import { Button } from "@/components/ui/button";
-
-export default function MainPage() {
+export default function ComponentsPage() {
   return (
     <section className="flex justify-center">
       <div className="max-w-[660px] mx-6 my-12">
