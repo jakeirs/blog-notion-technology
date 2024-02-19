@@ -1,4 +1,5 @@
 import { cache } from "react";
+import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { notionClient } from "../setup";
 
 const blockId = "b3b3bc4cd37e4e75bec7984dcb4dd04c";
@@ -9,7 +10,7 @@ export const getBlocks = cache(async (blockId: string) => {
     page_size: 100,
   });
 
-  return results;
+  return results as BlockObjectResponse[];
 });
 
 function getRandomInt(minimum: number, maximum: number) {
