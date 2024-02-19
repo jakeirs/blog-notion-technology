@@ -1,8 +1,28 @@
-import {
-  SelectPropertyResponse,
-  DateResponse,
-  RichTextItemResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+
+type SelectColor =
+  | "default"
+  | "gray"
+  | "brown"
+  | "orange"
+  | "yellow"
+  | "green"
+  | "blue"
+  | "purple"
+  | "pink"
+  | "red";
+
+type SelectPropertyResponse = {
+  id: string;
+  name: string;
+  color: SelectColor;
+};
+
+type DateResponse = {
+  start: string;
+  end: string | null;
+  time_zone: string | null;
+};
 
 export type PropertiesNotion =
   | {

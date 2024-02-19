@@ -7,16 +7,33 @@ export const getPropertyFromPage = ({
 }: {
   property: string;
   page: PageObjectResponse;
-}) => {
+}): string | string[] => {
   const propertiesObj = page.properties;
   const singleProperty = propertiesObj[property] as PropertiesNotion;
-
-  switch (singleProperty.type) {
+  const type = singleProperty.type;
+  let result;
+  switch (type) {
     case "title":
-      return singleProperty[singleProperty.type][0].plain_text;
+      result = singleProperty[type][0].plain_text;
+      break;
+    case "rich_text":
+      result = singleProperty[type][0].plain_text;
+      break;
+    case "url":
+      result = singleProperty[type];
+      break;
+    case "number":
+      result = String(singleProperty[type]);
+      break;
+    case "select":
+      result = singleProperty[type]?.name;
+      break;
+    case "multi_select":
+      result = singleProperty[type].map((option) => option.name);
+      break;
   }
 
-  return propertiesObj;
+  return result ? result : "";
 };
 
 export const getAllPropertiesFromPage = ({
