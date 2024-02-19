@@ -1,4 +1,5 @@
 import {
+  getAllPropertiesFromPage,
   getPageFromSlug,
   getPropertyFromPage,
   getRecursivelyBlocks,
@@ -25,6 +26,7 @@ export default async function BlogPostPage({
 
   const title = getPropertyFromPage({ property: "Title", page });
   const blocks = await getRecursivelyBlocks(page.id);
+  const allProperties = getAllPropertiesFromPage({ page });
 
   return (
     <section className="flex justify-center">
@@ -33,6 +35,7 @@ export default async function BlogPostPage({
           <Link href={page.url}>{title}</Link>
         </div>
         <div className="py-14">
+          <ClientConsoleLog dataToLog={allProperties} />
           <RenderNotionBlocks blocks={blocks} />
         </div>
       </div>

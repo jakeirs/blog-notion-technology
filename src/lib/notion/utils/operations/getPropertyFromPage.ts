@@ -39,8 +39,11 @@ export const getPropertyFromPage = ({
 export const getAllPropertiesFromPage = ({
   page,
 }: {
-  property: string;
   page: PageObjectResponse;
 }) => {
   const propertiesObj = page.properties;
+  const keys = Object.keys(propertiesObj);
+  return keys.reduce((acc, key) => {
+    return { ...acc, [key]: getPropertyFromPage({ page, property: key }) };
+  }, {});
 };
