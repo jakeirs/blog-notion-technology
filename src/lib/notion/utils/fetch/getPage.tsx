@@ -1,7 +1,6 @@
 import { cache } from "react";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-
-import { database_id, notionClient } from "../setup";
+import { database_id, notionClient } from "@/lib/notion/setup";
 
 // const pageId = "fcece3b2-7c16-4a14-b775-28a2fbf59b65";
 const pageId = "b3b3bc4cd37e4e75bec7984dcb4dd04c";

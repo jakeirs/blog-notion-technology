@@ -1,10 +1,11 @@
 import {
-  getBlocks,
   getPageFromSlug,
   getPropertyFromPage,
+  getRecursivelyBlocks,
 } from "@/lib/notion/utils";
 import { RenderNotionBlocks } from "@/lib/notion/Render";
 import ClientConsoleLog from "@/components/technical/ClientConsoleLog";
+import Link from "next/link";
 
 // export async function generateStaticParams() {
 //   const database = await getDatabaseFiltered({ property });
@@ -21,13 +22,16 @@ export default async function BlogPostPage({
 }) {
   const page = await getPageFromSlug(params.slug);
   if (!page) return null;
+
   const title = getPropertyFromPage({ property: "Title", page });
-  const blocks = await getBlocks(page.id);
+  const blocks = await getRecursivelyBlocks(page.id);
 
   return (
     <section className="flex justify-center">
       <div className="max-w-[660px] mx-6 my-12">
-        <div className="text-4xl font-bold">{title}</div>
+        <div className="text-5xl font-bold">
+          <Link href={page.url}>{title}</Link>
+        </div>
         <div className="py-14">
           <RenderNotionBlocks blocks={blocks} />
         </div>

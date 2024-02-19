@@ -1,9 +1,12 @@
 import { cache } from "react";
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { notionClient } from "../setup";
+import { notionClient } from "@/lib/notion/setup";
 
 const blockId = "b3b3bc4cd37e4e75bec7984dcb4dd04c";
 
+/** getBlocks() -> fetch blocks without their children.
+ * Use getRecursivelyBlocks() instead
+ * */
 export const getBlocks = cache(async (blockId: string) => {
   const { results } = await notionClient.blocks.children.list({
     block_id: blockId,

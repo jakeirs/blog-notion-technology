@@ -1,5 +1,5 @@
 import { cache } from "react";
-import { database_id, notionClient } from "../setup";
+import { database_id, notionClient } from "@/lib/notion/setup";
 
 export const getDatabase = cache(() => {
   return notionClient.databases.query({
