@@ -40,7 +40,7 @@ export const getAllPropertiesFromPage = ({
   page,
 }: {
   page: PageObjectResponse;
-}) => {
+}): Record<string, string | string[]> => {
   const propertiesObj = page.properties;
   const keys = Object.keys(propertiesObj);
   return keys.reduce((acc, key) => {

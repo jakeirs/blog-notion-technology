@@ -35,7 +35,7 @@ export default async function BlogPostPage({
           <Link href={page.url}>{title}</Link>
         </div>
         <div className="py-14">
-          <ClientConsoleLog dataToLog={allProperties} />
+          <ClientConsoleLog dataToLog={allProperties.Title} />
           <RenderNotionBlocks blocks={blocks} />
         </div>
       </div>
