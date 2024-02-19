@@ -3,7 +3,7 @@ import { notionClient } from "../setup";
 
 const blockId = "b3b3bc4cd37e4e75bec7984dcb4dd04c";
 
-export const getBlocks = cache(async () => {
+export const getBlocks = cache(async (blockId: string) => {
   const { results } = await notionClient.blocks.children.list({
     block_id: blockId,
     page_size: 100,
@@ -63,6 +63,6 @@ export const getRecursivelyBlocks = cache(async (blockID: any) => {
         acc.push(curr);
       }
       return acc;
-    }, [])
+    }, []),
   );
 });

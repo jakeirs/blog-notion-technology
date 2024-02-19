@@ -7,13 +7,19 @@ export const getDatabase = cache(() => {
   });
 });
 
-export const getfilteredFromDatabase = async () => {
+export const getDatabaseFiltered = async ({
+  property,
+  value,
+}: {
+  property: string;
+  value: string;
+}) => {
   const response = await notionClient.databases.query({
     database_id,
     filter: {
-      property: "Slug",
+      property,
       rich_text: {
-        contains: "earth-to-mars",
+        contains: value,
       },
     },
   });

@@ -1,4 +1,4 @@
-import { CalloutBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import { CalloutBlockObjectResponse, PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { TextAnnotations } from "./text-annotations";
 
 export const CalloutBlock = (props: { data: CalloutBlockObjectResponse }) => {
