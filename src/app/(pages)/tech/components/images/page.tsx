@@ -7,8 +7,8 @@ export default function ComponentsImagesPage() {
   return (
     <div>
       <section className="flex justify-center flex-col p-40">
-        <ImageWithSquares src={src} />
-        {/*<JustSquares />*/}
+        {/*<ImageWithSquares src={src} />*/}
+        <JustSquares />
       </section>
     </div>
   );

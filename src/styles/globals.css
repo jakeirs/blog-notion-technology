@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "./notion-styles.css";
+@import "./patterns.css";
 
 @layer base {
   :root {
