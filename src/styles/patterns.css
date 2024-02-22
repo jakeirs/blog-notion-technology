@@ -50,10 +50,11 @@
 .grid-pattern {
     background-size: 35px 35px;
     background-image:
-            linear-gradient(to right, dimgrey 0px, transparent 1px),
-            linear-gradient(to bottom, dimgrey 0px, transparent 1px);
+            linear-gradient(to right, var(--image-bg-lines) 0px, transparent 1px),
+            linear-gradient(to bottom, var(--image-bg-lines) 0px, transparent 1px);
     background-position: 10px 10px;
-    background-color: rgba(248 250 252 /0.7);
+    background-color: var(--image-bg);
+    opacity: 0.2;
 }
 
 .dots-pattern {

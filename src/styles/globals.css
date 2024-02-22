@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @import "./notion-styles.css";
-@import "./patterns.css";
 
 @layer base {
   :root {
+    /* shadcn-ui variables */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -26,9 +26,14 @@
     --input: 240 5.9% 90%;
     --ring: 346.8 77.2% 49.8%;
     --radius: 0.5rem;
+
+    /* custom variables */
+    --image-bg: #edede9;
+    --image-bg-lines: #edede9;
   }
 
   .dark {
+    /* shadcn-ui variables */
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
@@ -48,5 +53,13 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 346.8 77.2% 49.8%;
+
+    /* custom variables */
+    --image-bg: #19241A;
+    --image-bg-lines: #edede9;
   }
+}
+
+@layer components {
+  @import "./patterns.css";
 }

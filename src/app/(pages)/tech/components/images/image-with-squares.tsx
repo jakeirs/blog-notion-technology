@@ -3,8 +3,8 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const ImageWithSquares = ({ src }: { src: string }) => {
   return (
-    <div className="p-2 not-prose relative bg-gray-50/50 rounded-xl overflow-hidden dark:bg-green-800/25">
-      <div className="grid-pattern inset-0 absolute"></div>
+    <div className="p-2 not-prose relative rounded-xl overflow-hidden">
+      <div className="grid-pattern inset-0 absolute" />
       <AspectRatio ratio={16 / 9}>
         <Image
           src={src}
