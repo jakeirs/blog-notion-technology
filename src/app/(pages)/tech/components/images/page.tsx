@@ -6,14 +6,16 @@ import { ImageSimple } from "@/components/ui/image-simple";
 export default function ComponentsImagesPage() {
   return (
     <div>
-      <div>
+      <div className="flex flex-col" /* "flex flex-col" works */>
         <ImageSimple src={src} />
+        <ImageWithBg src={src} ratio={16 / 9} />
       </div>
-      {/*<section className="grid-cols-[repeat(auto-fit,minmax(400px,auto))] grid gap-2">*/}
-      {/*  <ImageWithBg src={src} ratio={16 / 9} />*/}
-      {/*  <ImageWithBg src={src} ratio={16 / 9} />*/}
-      {/*  <PatternBg />*/}
-      {/*</section>*/}
+
+      <section className="grid-cols-[repeat(auto-fit,minmax(400px,auto))] grid gap-2">
+        <ImageWithBg src={src} ratio={16 / 9} />
+        <ImageWithBg src={src} ratio={16 / 9} />
+        <PatternBg />
+      </section>
     </div>
   );
 }

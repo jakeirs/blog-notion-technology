@@ -11,7 +11,7 @@ interface ImageSimpleProps {
  *  <div>
  *    <SimpleImage src={src} />
  *  </div>
- *
+ * But it won't appear in `flex` or `grid` unless you add `w-full`
  **/
 export const ImageSimple: FunctionComponent<ImageSimpleProps> = ({
   src = "",
