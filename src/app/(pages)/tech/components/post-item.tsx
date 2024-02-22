@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FunctionComponent } from "react";
 import { ImageWithBg } from "@/components/ui/image-with-bg";
+import { Label } from "@/components/ui/label";
 
 interface PostItemProps {
   src: string;
@@ -18,6 +19,9 @@ export const PostItem: FunctionComponent<PostItemProps> = ({
           <ImageWithBg src={src} />
         </Link>
         <div>
+          <Label color="green">
+            <span>Technology</span>
+          </Label>
           <h2 className="text-xl line-clamp-2 font-medium tracking-normal">
             <span
               className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom
