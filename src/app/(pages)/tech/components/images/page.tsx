@@ -1,14 +1,14 @@
-import { ImageWithSquares } from "@/app/(pages)/tech/components/images/image-with-squares";
 import { PatternBg } from "@/components/ui/pattern-bg";
+import { src } from "@/app/(pages)/tech/components/page";
+import { ImageWithBg } from "@/components/ui/image-with-bg";
 
-const src =
-  "https://images.unsplash.com/photo-1496692052106-d37cb66ab80c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZyZWV8ZW58MHx8MHx8fDA%3D";
 export default function ComponentsImagesPage() {
   return (
     <div>
-      <section className="flex justify-center flex-col p-40">
-        <ImageWithSquares src={src} />
-        {/*<PatternBg />*/}
+      <section className="grid-cols-[repeat(auto-fit,minmax(400px,auto))] grid gap-2">
+        <ImageWithBg src={src} ratio={16 / 9} />
+        <ImageWithBg src={src} ratio={16 / 9} />
+        <PatternBg />
       </section>
     </div>
   );
