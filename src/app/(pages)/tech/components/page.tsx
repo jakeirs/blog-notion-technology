@@ -2,7 +2,8 @@ import PostItem from "@/app/(pages)/tech/components/post-item";
 
 export const src =
   "https://images.unsplash.com/photo-1496692052106-d37cb66ab80c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZyZWV8ZW58MHx8MHx8fDA%3D";
-
+export const title =
+  "Architectural Engineering Wonders of the modern era for your Inspiration";
 export default function ComponentsPage() {
   return (
     <section className="flex justify-center">
@@ -11,8 +12,8 @@ export default function ComponentsPage() {
           This is heading
         </div>
         <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
-          <PostItem src={src} />
-          <PostItem src={src} />
+          <PostItem src={src} title={title} />
+          <PostItem src={src} title={title} />
         </div>
       </div>
     </section>
