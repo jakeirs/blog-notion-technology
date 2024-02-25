@@ -1,6 +1,5 @@
 import { PatternBg } from "@/components/ui/pattern-bg";
-import { src } from "@/app/(pages)/tech/components/page";
-import { ImageWithBg } from "@/components/ui/image-with-bg";
+import { ImageWithBg, src } from "@/components/ui/image-with-bg";
 import { ImageSimple } from "@/components/ui/image-simple";
 
 export default function ComponentsImagesPage() {
