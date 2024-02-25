@@ -24,6 +24,11 @@ export default async function DigitalGardeSproutsPage() {
               Single Post Sprout
             </Link>
           </li>
+          <li>
+            <Link className="underline" href="/blog/digital-garden/staging">
+              Staging Main
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
