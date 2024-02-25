@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { getDatabase, getPropertyFromPage } from "@/lib/notion/utils";
+import { ImageWithBg, src } from "@/components/ui/image-with-bg";
 /** @todo
  * because it's already published blog post, the content should be
  * ISR every 12 hours for example.
@@ -14,7 +15,41 @@ export default async function BlogHomePage() {
   return (
     <section className="flex justify-center">
       <div className="max-w-[660px] mx-6 my-12">
-        <div className="text-4xl mb-4">BlogHomePage</div>
+        <div>
+          <h1 className="text-5xl max-w-[750px] mx-auto my-6 pb-2 font-bold text-center ">
+            Blog
+          </h1>
+          <h2 className="text-2xl max-w-[750px] mx-auto my-6 pb-2 font-bold text-center">
+            Post Categories divided into 2:
+          </h2>
+          <div className="text-xl pb-2 font-bold">
+            Survive in Digital Economy
+          </div>
+          <div className="text-xl pb-2 font-bold">How we build</div>
+          <ImageWithBg src={src} ratio={16 / 7} />
+          <div>
+            <h2 className="text-2xl max-w-[750px] mx-auto my-6 pb-2 font-bold ">
+              Links:
+            </h2>
+            <ul className="list-disc pl-8">
+              <li>
+                <Link className="underline" href="/blog/single-post">
+                  Single Post
+                </Link>
+              </li>
+              <li>
+                <Link className="underline" href="/blog/digital-survival-blog">
+                  Digital Survival
+                </Link>
+              </li>
+              <li>
+                <Link className="underline" href="/blog/how-we-build-blog">
+                  How we build
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div>
           {posts.map((post: PageObjectResponse) => {
             const title = getPropertyFromPage({
