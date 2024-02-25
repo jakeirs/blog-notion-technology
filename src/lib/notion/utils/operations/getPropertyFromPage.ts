@@ -14,10 +14,10 @@ export const getPropertyFromPage = ({
   let result;
   switch (type) {
     case "title":
-      result = singleProperty[type][0].plain_text;
+      result = singleProperty[type][0]?.plain_text;
       break;
     case "rich_text":
-      result = singleProperty[type][0].plain_text;
+      result = singleProperty[type][0]?.plain_text;
       break;
     case "url":
       result = singleProperty[type];
@@ -29,7 +29,7 @@ export const getPropertyFromPage = ({
       result = singleProperty[type]?.name;
       break;
     case "multi_select":
-      result = singleProperty[type].map((option) => option.name);
+      result = singleProperty[type]?.map((option) => option.name);
       break;
   }
 
