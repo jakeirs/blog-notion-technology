@@ -15,7 +15,7 @@ export default async function BlogHomePage() {
 
   return (
     <div className="">
-      <PageHeadline title="We Share Knowledge." />
+      <PageHeadline />
 
       <div className="grid grid-cols-2">
         <div className=".Block presentation .cards">
@@ -24,6 +24,34 @@ export default async function BlogHomePage() {
         </div>
         <div className=".Block presentation .cards">
           <ImageWithBg src={src} ratio={16 / 9} />
+          <div className="LEading">Leading</div>
+        </div>
+      </div>
+      <div className="grid grid-cols-3">
+        <div className=".Block presentation .cards">
+          <ImageWithBg src={src} />
+          <div className="LEading">Leading</div>
+        </div>
+        <div className=".Block presentation .cards">
+          <ImageWithBg src={src} />
+          <div className="LEading">Leading</div>
+        </div>
+        <div className=".Block presentation .cards">
+          <ImageWithBg src={src} />
+          <div className="LEading">Leading</div>
+        </div>
+      </div>
+      <div className="grid grid-cols-3">
+        <div className=".Block presentation .cards">
+          <ImageWithBg src={src} />
+          <div className="LEading">Leading</div>
+        </div>
+        <div className=".Block presentation .cards">
+          <ImageWithBg src={src} />
+          <div className="LEading">Leading</div>
+        </div>
+        <div className=".Block presentation .cards">
+          <ImageWithBg src={src} />
           <div className="LEading">Leading</div>
         </div>
       </div>

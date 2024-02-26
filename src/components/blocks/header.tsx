@@ -2,8 +2,8 @@ import ThemeToggle from "./theme-toggle";
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
-      <div className="container flex items-center h-16 space-x-4 sm:justify-between sm:space-x-0">
+    <header className="sticky top-0 z-40 w-full border-b bg-background backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex items-center h-12 space-x-4 sm:justify-between sm:space-x-0">
         <div className="flex gap-6 md:gap-10">
           <h1 className="text-lg font-bold">48hrs.Studio</h1>
         </div>
