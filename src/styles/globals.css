@@ -83,3 +83,13 @@
     }
   }
 }
+
+
+
+@layer components {
+  .shadow-vignette {
+    box-shadow:
+            inset 5em -5em 3em -3em hsl(var(--background)),
+            inset -5em 5em 3em -3em hsl(var(--background))
+  }
+}

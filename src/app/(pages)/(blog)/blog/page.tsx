@@ -16,14 +16,13 @@ export default async function BlogHomePage() {
   return (
     <div className="">
       <PageHeadline />
-
       <div className="grid grid-cols-2">
-        <div className=".Block presentation .cards">
+        <div className=".Block presentation .cards inner-shadow-fading">
           <ImageWithBg src={src} ratio={16 / 9} />
           <div className="LEading">Leading</div>
         </div>
         <div className=".Block presentation .cards">
-          <ImageWithBg src={src} ratio={16 / 9} />
+          <ImageWithBg src={src} ratio={16 / 9} vignette={true} />
           <div className="LEading">Leading</div>
         </div>
       </div>

@@ -6,6 +6,7 @@ interface ImageWithSquaresProps {
   src: string;
   alt?: string;
   ratio?: number;
+  vignette?: boolean;
 }
 
 export const src =
@@ -15,6 +16,7 @@ export const ImageWithBg: FunctionComponent<ImageWithSquaresProps> = ({
   src = "",
   alt = "Thumbnail",
   ratio = 16 / 9,
+  vignette = false,
 }) => {
   return (
     <div className="p-[5px] not-prose relative rounded-xl overflow-hidden">
@@ -30,6 +32,7 @@ export const ImageWithBg: FunctionComponent<ImageWithSquaresProps> = ({
           />
         ) : null}
       </AspectRatio>
+      {vignette && <div className="absolute inset-0 shadow-vignette" />}
     </div>
   );
 };
