@@ -63,3 +63,23 @@
 @layer components {
   @import "./patterns.css";
 }
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+    @media (min-width: 640px) {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+
+    @media (min-width: 1280px) {
+      padding-right: 4rem;
+      padding-left: 4rem;
+    }
+  }
+}
