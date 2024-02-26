@@ -12,7 +12,7 @@ export default async function BlogHomePage() {
   const posts = database.results as Array<PageObjectResponse>;
 
   return (
-    <div>
+    <div className="">
       <BlogHomeTemporaryPage />
     </div>
   );
