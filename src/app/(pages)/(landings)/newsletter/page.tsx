@@ -2,6 +2,8 @@ import Link from "next/link";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { getDatabase } from "@/lib/notion/utils";
 import { ImageWithBg, src } from "@/components/ui/image-with-bg";
+
+const imgSrcWebFraming = "/images/web-framing/newsletter.png";
 /** @todo
  * because it's already published blog post, the content should be
  * ISR every 12 hours for example.
@@ -22,7 +24,7 @@ export default async function BlogHomePage() {
           <h2 className="text-2xl max-w-[750px] mx-auto my-6 pb-2 font-bold text-center">
             Why to join a Newsletter?
           </h2>
-          <ImageWithBg src={src} ratio={16 / 7} />
+          <ImageWithBg src={imgSrcWebFraming} ratio={16 / 7} />
           <div>
             <h2 className="text-2xl max-w-[750px] mx-auto my-6 pb-2 font-bold ">
               Links:
