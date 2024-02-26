@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+
 import { ThemeProvider } from "@/components/blocks/theme-provider";
 import { Inter } from "next/font/google";
 import SiteHeader from "@/components/blocks/header";
