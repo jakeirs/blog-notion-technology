@@ -1,6 +1,6 @@
 export const PageHeadline = () => {
   return (
-    <div className="mt-20 mb-10 flex">
+    <div className="mt-20 mb-20 flex">
       <div className="text-center mx-auto inline-block text-6xl font-bold tracking-tight uppercase relative">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white">
           We Share Kno
