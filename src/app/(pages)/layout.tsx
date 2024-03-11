@@ -24,7 +24,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative flex flex-col">
-            <SiteHeader />
+            {/*<SiteHeader />*/}
             <main className="flex-1">{children}</main>
           </div>
         </ThemeProvider>
